@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 47a5d1310fba0212493ae5fd854155132b935632 lmsutools <lcomunicamos3@gmail.com> 1747456769 -0500	clone: from https://github.com/jesusgraterol/binance-futures-dataset-builder.git
+47a5d1310fba0212493ae5fd854155132b935632 6eea3e9124e113d8e6d12e7fcd7f93710c9fa7d4 lmsutools <lcomunicamos3@gmail.com> 1747459318 -0500	commit: UI v0.0.1
+6eea3e9124e113d8e6d12e7fcd7f93710c9fa7d4 bce4f57f781cff0660a786039ab75bd345e9910d lmsutools <lcomunicamos3@gmail.com> 1747463135 -0500	commit: feat: Frontend management, and Implement timeframe selection and settings persistence

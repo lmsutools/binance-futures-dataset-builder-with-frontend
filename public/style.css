@@ -1,0 +1,147 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"],
+select {
+    width: calc(100% - 22px); /* Adjust width accounting for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 1rem;
+    margin-bottom: 10px; /* Added margin for date inputs */
+}
+
+/* Adjust date input width to fit side-by-side better */
+#dateRangeInputs input[type="date"] {
+    width: calc(50% - 16px); /* Approx half width minus padding/border */
+    display: inline-block; /* Allow them to be on the same line */
+    margin-right: 10px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+#dateRangeInputs label {
+     display: inline-block; /* Align labels with inputs */
+     width: calc(50% - 16px - 10px); /* Adjust width */
+     margin-bottom: 5px; /* Keep original label margin */
+     margin-right: 10px;
+     font-weight: normal; /* Less bold for inline labels */
+}
+
+/* Adjust label for the first date input */
+#dateRangeInputs label:first-of-type {
+    margin-right: 10px; /* Keep consistent spacing */
+}
+
+
+#dateRangeInputs input[type="date"]:last-of-type {
+    margin-right: 0; /* Remove margin on the last date input */
+}
+
+
+.info {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.loading {
+    margin-top: 10px;
+    font-style: italic;
+    color: #007bff;
+    display: none; /* Hidden by default */
+}
+
+.output-section {
+    margin-top: 30px;
+}
+
+.output {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 50px; /* Reduced min-height */
+    max-height: 300px; /* Limit height and add scroll */
+    overflow-y: auto;
+    white-space: pre-wrap; /* Preserve formatting for JSON output */
+    word-wrap: break-word; /* Prevent overflow */
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.output.error {
+    background-color: #ffe6e6;
+    border-color: #ffcccc;
+    color: #d9534f; /* Red color for errors */
+}
+
+/* Style for radio button labels */
+.form-group label[for="rangeTypeDate"],
+.form-group label[for="rangeTypeLast"] {
+    font-weight: normal; /* Reset bold */
+    display: inline-block; /* Align with radio buttons */
+    margin-right: 15px; /* Space between options */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Style for the label that applies to the radio button group */
+.form-group label:first-of-type {
+    display: block; /* Keep the group label on its own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}

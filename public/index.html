@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Binance Data Fetcher</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Binance Futures Data Fetcher</h1>
+
+        <div class="form-group">
+            <label for="dataType">Data Type:</label>
+            <select id="dataType">
+                <option value="fundingRate">Funding Rate (BTCUSDT)</option>
+                <option value="openInterest">Open Interest (BTCUSDT)</option>
+                <option value="longShortRatio">Long/Short Ratio (BTCUSDT)</option>
+                <option value="takerVolume">Taker Buy/Sell Volume (BTCUSDT)</option>
+            </select>
+            <div class="info">(Symbol: BTCUSDT)</div>
+        </div>
+
+         <div class="form-group">
+            <label for="period">Period:</label>
+            <select id="period"></select>
+             <div id="periodInfo" class="info">(Select a Data Type first)</div>
+        </div>
+
+        <div class="form-group">
+            <label>Select Range By:</label>
+            <div>
+                <input type="radio" id="rangeTypeDate" name="rangeType" value="dateRange" checked>
+                <label for="rangeTypeDate">Date Range</label>
+
+                <input type="radio" id="rangeTypeLast" name="rangeType" value="lastX">
+                <label for="rangeTypeLast">Last X Timeframe</label>
+            </div>
+        </div>
+
+        <div id="dateRangeInputs" class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+        </div>
+
+        <div id="lastXInputs" class="form-group" style="display: none;">
+            <label for="lastXDuration">Retrieve Last:</label>
+             <select id="lastXDuration">
+                <option value="1h">1 Hour</option>
+                <option value="2h">2 Hours</option>
+                <option value="4h">4 Hours</option>
+                <option value="6h">6 Hours</option>
+                <option value="8h">8 Hours</option>
+                <option value="12h">12 Hours</option>
+                <option value="1d">1 Day</option>
+                <option value="3d">3 Days</option>
+                <option value="7d">7 Days</option>
+                <option value="14d">14 Days</option>
+                <option value="30d">30 Days</option>
+            </select>
+        </div>
+
+
+        <button id="fetchButton">Fetch Data</button>
+        <div id="loadingIndicator" class="loading">Loading...</div>
+
+         <div class="output-section">
+             <h2>Fetched Data Info</h2>
+             <div id="dataInfo" class="output"><p>Details about fetched data will appear here.</p></div>
+         </div>
+
+        <div class="output-section">
+            <h2>Results</h2>
+            <div id="results" class="output">
+                <p>Select parameters and click "Fetch Data".</p>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>API Response / Errors</h2>
+            <div id="responseOutput" class="output error">
+                <p>API status and errors will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

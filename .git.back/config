@@ -1,0 +1,18 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "upstream"]
+	url = https://github.com/jesusgraterol/binance-futures-dataset-builder.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "main"]
+	remote = upstream
+	vscode-merge-base = origin/main
+	merge = refs/heads/main
+	github-pr-owner-number = "jesusgraterol#binance-futures-dataset-builder#1"
+[remote "origin"]
+	url = https://github.com/lmsutools/binance-futures-dataset-builder.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
